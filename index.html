@@ -28,7 +28,7 @@ function initialize() {
   // 3 seconds after the center of the map has changed, pan back to the
   // marker.
     window.setTimeout(function() {
-      map.panTo(marker.getPosition());
+      marker.panTo(map.getCenter());
     }, 3000);
   });
 }

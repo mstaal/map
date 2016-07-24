@@ -5,9 +5,10 @@
 </script>
 
 <script>
+var myPos = new google.maps.LatLng(55.61152,12.08802)
 function initialize() {
   var mapProp = {
-    center: new google.maps.LatLng(55.61152,12.08802),
+    center: myPos,
     zoom:18,
     panControl:true,
     zoomControl:true,
@@ -19,6 +20,9 @@ function initialize() {
     mapTypeId: google.maps.MapTypeId.HYBRID
   };
   var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  var marker = new google.maps.Marker({
+    position:myPos
+  });
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 </script>

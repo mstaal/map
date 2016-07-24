@@ -20,6 +20,7 @@ function initialize() {
     mapTypeId: google.maps.MapTypeId.HYBRID
   };
   var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  map.setTilt(0);
   var marker = new google.maps.Marker({
     position:myPos
   });

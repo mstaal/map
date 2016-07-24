@@ -24,12 +24,12 @@ function initialize() {
     position:myPos
   });
   marker.setMap(map);
-  google.maps.event.addListener(map, 'center_changed', function() {
+  google.maps.event.addListener(map, 'drag', function() {
   // 3 seconds after the center of the map has changed, pan back to the
   // marker.
     window.setTimeout(function() {
       marker.setPosition(map.getCenter());
-    }, 3);
+    }, 1);
   });
 }
 google.maps.event.addDomListener(window, 'load', initialize);

@@ -21,7 +21,7 @@ function initialize() {
   };
   var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
   var marker = new google.maps.Marker({
-    //position:myPos
+    position:myPos
   });
   marker.setMap(map);
   google.maps.event.addListener(map, 'drag', function() {
